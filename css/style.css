@@ -382,8 +382,8 @@ td, th {
  */
 @font-face {
   font-family: icons;
-  src: url("../../../../images/icons/output/fonts/icons.eot");
-  src: url("../../../../images/icons/output/fonts/icons.eot?#iefix") format("embedded-opentype"), url("../../../../images/icons/output/fonts/icons.woff") format("woff"), url("../../../../images/icons/output/fonts/icons.ttf") format("truetype");
+  src: url("../images/icons/output/fonts/icons.eot");
+  src: url("../images/icons/output/fonts/icons.eot?#iefix") format("embedded-opentype"), url("../images/icons/output/fonts/icons.woff") format("woff"), url("../images/icons/output/fonts/icons.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
