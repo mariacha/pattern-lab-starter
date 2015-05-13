@@ -434,6 +434,12 @@ body {
 h1 {
   font-family: 'Lato', sans-serif; }
 
+blockquote {
+  font-style: italic;
+  border-left: solid 3px #68696d;
+  margin-left: 20px;
+  padding-left: 20px; }
+
 /* generated with grunt-sass-globbing */
 /**
  * A demo block to show BEM in action
@@ -537,7 +543,7 @@ pre {
 
 .demo__block {
   height: 200px;
-  background-color: rgba(122, 122, 127, 0.5); }
+  background-color: rgba(104, 105, 109, 0.5); }
 
 .icons-container {
   max-width: 1140px;
