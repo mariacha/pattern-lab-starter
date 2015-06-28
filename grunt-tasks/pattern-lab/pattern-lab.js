@@ -1,22 +1,39 @@
 module.exports = function (grunt, config) {
   "use strict";
   // `config` vars set in `Gruntconfig.yml`
+  var openBrowserAtStart;
+  if (config.openBrowserAtStart) {
+    openBrowserAtStart = "http://localhost:9005/" + config.serverPath;
+  } else {
+    openBrowserAtStart = false;
+  }
 
   var assets = grunt.file.readYAML("pattern-lab-assets.yml");
+  
+  grunt.registerTask("plBuild", "Build Pattern Lab", function() {
+    grunt.task.run([
+      "wiredep:pl",
+      "injector:plCSS",
+      "injector:plJS",
+      "pattern_lab_component_builder"
+    ]);
+    if (!grunt.file.exists(config.plDir + "public/styleguide/html/styleguide.html")) {
+      // first run
+      grunt.log.writeln("Looks like we have a first run; copying core/styleguide over to public folder now...");
+      grunt.task.run("shell:copyPLstyleguide");
+    }
+    grunt.task.run("shell:plBuild");
+  });
 
-  grunt.registerTask("plBuild", [
-    "wiredep:pl",
-    "injector:plCSS",
-    "injector:plJS",
-    "pattern_lab_component_builder",
-    "shell:plBuild"
-  ]);
 
   grunt.config.merge({
 
     shell: {
       plBuild: {
         command: "php " + config.plDir + "core/builder.php --generate --nocache"
+      },
+      copyPLstyleguide: {
+        command: "mkdir -p " + config.plDir + "public/styleguide/ && cp -r " + config.plDir + "core/styleguide/ " + config.plDir + "public/styleguide/"
       },
       livereload: {
         command: "touch .change-to-reload.txt"
@@ -34,7 +51,7 @@ module.exports = function (grunt, config) {
 
     watch: {
       pl: {
-        files: config.plDir + "source/**/*.*",
+        files: config.plDir + "source/**/*.{mustache,json}",
         tasks: [
           "shell:plBuild",
           "shell:livereload",
@@ -58,7 +75,7 @@ module.exports = function (grunt, config) {
           base: config.serverDir,
           keepalive: true,
           livereload: true,
-          open: "http://localhost:9005/" + config.serverPath,
+          open: openBrowserAtStart,
           middleware: function (connect, options, middlewares) {
 
             middlewares.unshift(function (req, res, next) {
@@ -102,13 +119,13 @@ module.exports = function (grunt, config) {
       },
       breakpoints: {
         options: {
-          regex: '^\\$bp.*',
+          regex: '^\\$width.*',
           allow_var_values: false
         },
         src: config.scssDir + '00-config/_breakpoints.scss',
         dest: config.plDir + "source/_patterns/01-molecules/01-layout/99-breakpoints.json"
       }
-    },
+    }
   });
 
   grunt.config.merge({

@@ -2,32 +2,33 @@ module.exports = function (grunt, config) {
   "use strict";
   // `config` vars set in `Gruntconfig.yml`
 
+  var scssLintForce = true;
+  if (grunt.option('noTestForce')) {
+    scssLintForce = false;
+  }
+
+
   grunt.config.merge({
     sass: {
       options: {
         sourceMap: true,
-        outputStyle: 'nested' // 'expanded' and 'compact' not supported by libsass yet
+        sourceMapEmbed: true,
+        outputStyle: 'expanded'
       },
       dist: {
-        files: {
-          'css/style.css': config.scssConfigRoot + config.scssDir + 'style.scss'
-        }
+        files: [{
+          src: config.scssDir + 'style.scss',
+          dest: config.scssDest
+        }]
       }
     },
     sass_globbing: {
-      smacss_import: {
-        files: {
-          'scss/99-imports/_00-config.scss': config.scssConfigRoot + config.scssDir + '00-config/**/*.scss',
-          'scss/99-imports/_10-base.scss': config.scssConfigRoot + config.scssDir + '10-base/**/*.scss',
-          'scss/99-imports/_20-vendor.scss': config.scssConfigRoot + config.scssDir + '20-vendor/**/*.scss',
-          'scss/99-imports/_30-global.scss': config.scssConfigRoot + config.scssDir + '30-global/**/*.scss',
-          'scss/99-imports/_40-components.scss': config.scssConfigRoot + config.scssDir + '40-components/**/*.scss',
-          'scss/99-imports/_50-templates.scss': config.scssConfigRoot + config.scssDir + '50-templates/**/*.scss',
-          'scss/99-imports/_60-pages.scss': config.scssConfigRoot + config.scssDir + '60-pages/**/*.scss'
-        },
-        options: {
-          useSingleQuotes: false
-        }
+      options: {
+        useSingleQuotes: false
+      },
+      partials: {
+        src: config.scssDir + '**/_*.scss',
+        dest: config.scssDir + '_all-partials.scss'
       }
     },
     //shell: {
@@ -36,11 +37,30 @@ module.exports = function (grunt, config) {
     //    command: "echo hello world"
     //  }
     //},
+    postcss: {
+      options: {
+        map: {
+          prev: false,
+          inline: true
+        },
+        processors: [
+          require('autoprefixer-core')({
+            browsers: [
+              'last 2 versions',
+              'IE >= 9'
+            ]
+          })
+        ]
+      },
+      styles: {
+        src: config.scssDest
+      }
+    },
     scsslint: {
       "options": {
         "bundleExec": config.scssConfigRoot,
         "config": config.scssConfigRoot + ".scss-lint.yml",
-        "force": true,
+        "force": scssLintForce,
         "maxBuffer": 999999,
         "colorizeOutput": true,
         "compact": true
@@ -51,11 +71,12 @@ module.exports = function (grunt, config) {
     },
     watch: {
       styles: {
-        files: [config.scssDir + "**/*.scss", "!scss/99-imports/**/*"],
+        files: [
+          config.scssDir + "**/*.scss",
+          "!" + config.scssDir + "**/*tmp*.*"
+        ],
         tasks: [
-          //"shell:stylesCompile",
-          "sass_globbing:smacss_import",
-          "sass",
+          "stylesCompile",
           "shell:livereload",
           "newer:scsslint:styles", // only lint the newly change files
           "newer:pattern_lab_component_builder"
@@ -64,6 +85,10 @@ module.exports = function (grunt, config) {
     }
   });
 
-  grunt.registerTask("stylesCompile", ['sass_globbing:smacss_import', 'sass']);
+  grunt.registerTask("stylesCompile", [
+    'sass_globbing',
+    'sass',
+    'postcss:styles'
+  ]);
 
 };
