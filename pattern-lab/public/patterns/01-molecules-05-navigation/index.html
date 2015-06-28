@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="pl">
   <head>
-    <title>Pattern Lab</title>
+    <title>Title</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width"/>
 
@@ -35,6 +35,7 @@
     <!-- endbower -->
     
     <!-- injector:js -->
+    <script src="../../../../js/compiled-from-es6.js"></script>
     <script src="../../../../js/script.js"></script>
     <!-- endinjector -->
     
@@ -50,28 +51,44 @@
 					<div id="molecules-primary-nav" class="sg-pattern">
 						<h2 class="sg-pattern-head" ><a href="../../patterns/01-molecules-05-navigation-00-primary-nav/01-molecules-05-navigation-00-primary-nav.html" class="patternLink" data-patternpartial="molecules-primary-nav">Primary Nav</a></h2>
 						<div class="sg-pattern-body">
-							<nav id="nav" class="nav">
-	<ul class="nav-list">
-		<li><a href="#">Home</a></li>
-		<li><a href="#">About</a></li>
-		<li><a href="#">Blog</a></li>
-		<li><a href="#">Contact</a></li>
-	</ul>
-</nav><!--end .nav-->
-
+							<nav class="primary-nav">
+  <ul class="menu clearfix">
+    <li class="first leaf"><a href="#" title="View and customize your dashboard.">Menu Item 1</a></li>
+    <li class="collapsed"><a href="#" title="Administer content and comments.">Menu Item 2</a></li>
+    <li class="collapsed"><a href="#" title="Administer blocks, content types, menus, etc.">Menu Item 3</a></li>
+    <li class="expanded active-trail"><a href="#" title="Select and configure your themes." class="active-trail">Menu
+      Item 4</a>
+      <ul class="menu clearfix">
+        <li class="first leaf active-trail"><a href="#" class="active-trail active">Menu Item 4.1</a></li>
+        <li class="leaf"><a href="#" class="">Menu Item 4.2</a></li>
+        <li class="last leaf"><a href="#" class="">Menu Item 4.3</a></li>
+      </ul>
+    </li>
+    <li class="leaf"><a href="#" title="Manage user accounts, roles, and permissions.">Menu Item 5</a></li>
+    <li class="leaf last"><a href="#" title="Extend site functionality.">Menu Item 6</a></li>
+  </ul>
+</nav>
 							<div class="sg-code" style="display: none">
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;nav id=&quot;nav&quot; class=&quot;nav&quot;&gt;
-	&lt;ul class=&quot;nav-list&quot;&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/nav&gt;&lt;!--end .nav--&gt;
-
+										&lt;nav class=&quot;primary-nav&quot;&gt;
+  &lt;ul class=&quot;menu clearfix&quot;&gt;
+    &lt;li class=&quot;first leaf&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;View and customize your dashboard.&quot;&gt;Menu Item 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;collapsed&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;Administer content and comments.&quot;&gt;Menu Item 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;collapsed&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;Administer blocks, content types, menus, etc.&quot;&gt;Menu Item 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;expanded active-trail&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;Select and configure your themes.&quot; class=&quot;active-trail&quot;&gt;Menu
+      Item 4&lt;/a&gt;
+      &lt;ul class=&quot;menu clearfix&quot;&gt;
+        &lt;li class=&quot;first leaf active-trail&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;active-trail active&quot;&gt;Menu Item 4.1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;leaf&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;&quot;&gt;Menu Item 4.2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;last leaf&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;&quot;&gt;Menu Item 4.3&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;leaf&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;Manage user accounts, roles, and permissions.&quot;&gt;Menu Item 5&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;leaf last&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;Extend site functionality.&quot;&gt;Menu Item 6&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
 									</code>
 								</pre>
 							</div>
@@ -80,22 +97,56 @@
 					<div id="molecules-footer-nav" class="sg-pattern">
 						<h2 class="sg-pattern-head" ><a href="../../patterns/01-molecules-05-navigation-01-footer-nav/01-molecules-05-navigation-01-footer-nav.html" class="patternLink" data-patternpartial="molecules-footer-nav">Footer Nav</a></h2>
 						<div class="sg-pattern-body">
-							<ul class="nav-footer">
-	<li><a href="#">Home</a></li>
-	<li><a href="#">About</a></li>
-	<li><a href="#">Blog</a></li>
-	<li><a href="#">Contact</a></li>
+							<ul class="menu clearfix">
+  <li class="first last expanded active-trail"><a href="#" class="active-trail">Administration</a>
+    <ul class="menu clearfix">
+      <li class="first leaf"><a href="#" title="View and customize your dashboard.">Dashboard</a></li>
+      <li class="collapsed"><a href="#" title="Administer content and comments.">Content</a></li>
+      <li class="collapsed"><a href="#"
+                               title="Administer blocks, content types, menus, etc.">Structure</a></li>
+      <li class="expanded active-trail"><a href="#" title="Select and configure your themes."
+                                           class="active-trail">Appearance</a>
+        <ul class="menu clearfix">
+          <li class="first last leaf active-trail"><a href="#" class="active-trail active">Style
+            guide</a></li>
+        </ul>
+      </li>
+      <li class="leaf"><a href="#" title="Manage user accounts, roles, and permissions.">People</a></li>
+      <li class="leaf"><a href="#" title="Extend site functionality.">Modules</a></li>
+      <li class="collapsed"><a href="#" title="Administer settings.">Configuration</a></li>
+      <li class="collapsed"><a href="#" title="View reports, updates, and errors.">Reports</a></li>
+      <li class="last leaf"><a href="#" title="Reference for usage, configuration, and modules.">Help</a></li>
+    </ul>
+  </li>
 </ul>
+
 							<div class="sg-code" style="display: none">
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;ul class=&quot;nav-footer&quot;&gt;
-	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+										&lt;ul class=&quot;menu clearfix&quot;&gt;
+  &lt;li class=&quot;first last expanded active-trail&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;active-trail&quot;&gt;Administration&lt;/a&gt;
+    &lt;ul class=&quot;menu clearfix&quot;&gt;
+      &lt;li class=&quot;first leaf&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;View and customize your dashboard.&quot;&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;collapsed&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;Administer content and comments.&quot;&gt;Content&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;collapsed&quot;&gt;&lt;a href=&quot;#&quot;
+                               title=&quot;Administer blocks, content types, menus, etc.&quot;&gt;Structure&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;expanded active-trail&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;Select and configure your themes.&quot;
+                                           class=&quot;active-trail&quot;&gt;Appearance&lt;/a&gt;
+        &lt;ul class=&quot;menu clearfix&quot;&gt;
+          &lt;li class=&quot;first last leaf active-trail&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;active-trail active&quot;&gt;Style
+            guide&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;leaf&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;Manage user accounts, roles, and permissions.&quot;&gt;People&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;leaf&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;Extend site functionality.&quot;&gt;Modules&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;collapsed&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;Administer settings.&quot;&gt;Configuration&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;collapsed&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;View reports, updates, and errors.&quot;&gt;Reports&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;last leaf&quot;&gt;&lt;a href=&quot;#&quot; title=&quot;Reference for usage, configuration, and modules.&quot;&gt;Help&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
+
 									</code>
 								</pre>
 							</div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="pl">
   <head>
-    <title>Pattern Lab</title>
+    <title>Title</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width"/>
 
@@ -35,6 +35,7 @@
     <!-- endbower -->
     
     <!-- injector:js -->
+    <script src="../../../../js/compiled-from-es6.js"></script>
     <script src="../../../../js/script.js"></script>
     <!-- endinjector -->
     
@@ -47,125 +48,69 @@
 			
 			<!-- Patterns -->
 			<div id="sg-patterns">
-					<div id="atoms-text-fields" class="sg-pattern">
-						<h2 class="sg-pattern-head" ><a href="../../patterns/00-atoms-06-forms-00-text-fields/00-atoms-06-forms-00-text-fields.html" class="patternLink" data-patternpartial="atoms-text-fields">Text Fields</a></h2>
+					<div id="atoms-select-menu" class="sg-pattern">
+						<h2 class="sg-pattern-head" ><a href="../../patterns/00-atoms-06-forms-01-select-menu/00-atoms-06-forms-01-select-menu.html" class="patternLink" data-patternpartial="atoms-select-menu">Select Menu</a></h2>
 						<div class="sg-pattern-body">
-							<fieldset>
-    <div class="field-container">
-        <label for="text">Text Input <abbr title="Required">*</abbr></label>
-        <input id="text" type="text" placeholder="Text Input">
-    </div>
-    <div class="field-container">
-        <label for="password">Password</label>
-        <input id="password" type="password" placeholder="Type your Password">
-    </div>
-    <div class="field-container">
-        <label for="webaddress">Web Address</label>
-        <input id="webaddress" type="url" placeholder="http://yoursite.com">
-    </div>
-    <div class="field-container">
-        <label for="emailaddress">Email Address</label>
-        <input id="emailaddress" type="email" placeholder="name@email.com">
-    </div>
-    <div class="field-container">
-        <label for="search">Search</label>
-        <input id="search" type="search" placeholder="Enter Search Term">
-    </div>
-    <div class="field-container">
-        <label for="text">Number Input <abbr title="Required">*</abbr></label>
-        <input id="text" type="number" placeholder="Enter a Number" pattern="[0-9]*">
-    </div>
-    <div class="field-container">
-        <label for="textarea">Textarea</label>
-        <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
-    </div>
-    <div class="field-container">
-        <label class="error">Error Input</label>
-        <input class="is-error" type="text" placeholder="Text Input">
-    </div>
-    <div class="field-container">
-        <label  class="valid">Valid</label>
-        <input  class="is-valid" type="text" placeholder="Text Input">
-    </div>
-</fieldset>
+							<div class="form-item form-type-select form-item-select">
+  <label for="edit-select">Select </label>
+  <select id="edit-select" name="select" class="form-select">
+    <option value="Nam tincidunt duis">Nam tincidunt duis</option>
+    <option value="Aliquam lorem neque">Aliquam lorem neque</option>
+    <option value="Duis lobortis egestas">Duis lobortis egestas</option>
+    <option value="Lacinia ac cras">Lacinia ac cras</option>
+    <option value="Mi dignissim viverra">Mi dignissim viverra</option>
+  </select>
+  <div class="description">Curabitur quis nunc nibh.</div>
+</div>
+
 							<div class="sg-code" style="display: none">
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;fieldset&gt;
-    &lt;div class=&quot;field-container&quot;&gt;
-        &lt;label for=&quot;text&quot;&gt;Text Input &lt;abbr title=&quot;Required&quot;&gt;*&lt;/abbr&gt;&lt;/label&gt;
-        &lt;input id=&quot;text&quot; type=&quot;text&quot; placeholder=&quot;Text Input&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;field-container&quot;&gt;
-        &lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;
-        &lt;input id=&quot;password&quot; type=&quot;password&quot; placeholder=&quot;Type your Password&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;field-container&quot;&gt;
-        &lt;label for=&quot;webaddress&quot;&gt;Web Address&lt;/label&gt;
-        &lt;input id=&quot;webaddress&quot; type=&quot;url&quot; placeholder=&quot;http://yoursite.com&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;field-container&quot;&gt;
-        &lt;label for=&quot;emailaddress&quot;&gt;Email Address&lt;/label&gt;
-        &lt;input id=&quot;emailaddress&quot; type=&quot;email&quot; placeholder=&quot;name@email.com&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;field-container&quot;&gt;
-        &lt;label for=&quot;search&quot;&gt;Search&lt;/label&gt;
-        &lt;input id=&quot;search&quot; type=&quot;search&quot; placeholder=&quot;Enter Search Term&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;field-container&quot;&gt;
-        &lt;label for=&quot;text&quot;&gt;Number Input &lt;abbr title=&quot;Required&quot;&gt;*&lt;/abbr&gt;&lt;/label&gt;
-        &lt;input id=&quot;text&quot; type=&quot;number&quot; placeholder=&quot;Enter a Number&quot; pattern=&quot;[0-9]*&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;field-container&quot;&gt;
-        &lt;label for=&quot;textarea&quot;&gt;Textarea&lt;/label&gt;
-        &lt;textarea id=&quot;textarea&quot; rows=&quot;8&quot; cols=&quot;48&quot; placeholder=&quot;Enter your message here&quot;&gt;&lt;/textarea&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;field-container&quot;&gt;
-        &lt;label class=&quot;error&quot;&gt;Error Input&lt;/label&gt;
-        &lt;input class=&quot;is-error&quot; type=&quot;text&quot; placeholder=&quot;Text Input&quot;&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;field-container&quot;&gt;
-        &lt;label  class=&quot;valid&quot;&gt;Valid&lt;/label&gt;
-        &lt;input  class=&quot;is-valid&quot; type=&quot;text&quot; placeholder=&quot;Text Input&quot;&gt;
-    &lt;/div&gt;
-&lt;/fieldset&gt;
+										&lt;div class=&quot;form-item form-type-select form-item-select&quot;&gt;
+  &lt;label for=&quot;edit-select&quot;&gt;Select &lt;/label&gt;
+  &lt;select id=&quot;edit-select&quot; name=&quot;select&quot; class=&quot;form-select&quot;&gt;
+    &lt;option value=&quot;Nam tincidunt duis&quot;&gt;Nam tincidunt duis&lt;/option&gt;
+    &lt;option value=&quot;Aliquam lorem neque&quot;&gt;Aliquam lorem neque&lt;/option&gt;
+    &lt;option value=&quot;Duis lobortis egestas&quot;&gt;Duis lobortis egestas&lt;/option&gt;
+    &lt;option value=&quot;Lacinia ac cras&quot;&gt;Lacinia ac cras&lt;/option&gt;
+    &lt;option value=&quot;Mi dignissim viverra&quot;&gt;Mi dignissim viverra&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;div class=&quot;description&quot;&gt;Curabitur quis nunc nibh.&lt;/div&gt;
+&lt;/div&gt;
+
 									</code>
 								</pre>
 							</div>
 						</div>
 					</div>
-					<div id="atoms-select-menu" class="sg-pattern">
-						<h2 class="sg-pattern-head" ><a href="../../patterns/00-atoms-06-forms-01-select-menu/00-atoms-06-forms-01-select-menu.html" class="patternLink" data-patternpartial="atoms-select-menu">Select Menu</a></h2>
+					<div id="atoms-textarea" class="sg-pattern">
+						<h2 class="sg-pattern-head" ><a href="../../patterns/00-atoms-06-forms-01-textarea/00-atoms-06-forms-01-textarea.html" class="patternLink" data-patternpartial="atoms-textarea">Textarea</a></h2>
 						<div class="sg-pattern-body">
-							<fieldset>
-    <div class="field-container">
-        <label for="select">Select</label>
-        <select id="select">
-            <optgroup label="Option Group">
-                <option>Option One</option>
-                <option>Option Two</option>
-                <option>Option Three</option>
-            </optgroup>
-        </select>
-    </div>
-</fieldset>
+							<div class="form-item form-type-textarea form-item-textarea">
+  <label for="edit-textarea">Textarea </label>
+
+  <div class="form-textarea-wrapper resizable textarea-processed resizable-textarea"><textarea id="edit-textarea" name="textarea" cols="60" rows="5" class="form-textarea"></textarea>
+
+    <div class="grippie"></div>
+  </div>
+  <div class="description">Sed nec lacus sed nibh iaculis luctus.</div>
+</div>
+
 							<div class="sg-code" style="display: none">
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;fieldset&gt;
-    &lt;div class=&quot;field-container&quot;&gt;
-        &lt;label for=&quot;select&quot;&gt;Select&lt;/label&gt;
-        &lt;select id=&quot;select&quot;&gt;
-            &lt;optgroup label=&quot;Option Group&quot;&gt;
-                &lt;option&gt;Option One&lt;/option&gt;
-                &lt;option&gt;Option Two&lt;/option&gt;
-                &lt;option&gt;Option Three&lt;/option&gt;
-            &lt;/optgroup&gt;
-        &lt;/select&gt;
-    &lt;/div&gt;
-&lt;/fieldset&gt;
+										&lt;div class=&quot;form-item form-type-textarea form-item-textarea&quot;&gt;
+  &lt;label for=&quot;edit-textarea&quot;&gt;Textarea &lt;/label&gt;
+
+  &lt;div class=&quot;form-textarea-wrapper resizable textarea-processed resizable-textarea&quot;&gt;&lt;textarea id=&quot;edit-textarea&quot; name=&quot;textarea&quot; cols=&quot;60&quot; rows=&quot;5&quot; class=&quot;form-textarea&quot;&gt;&lt;/textarea&gt;
+
+    &lt;div class=&quot;grippie&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;description&quot;&gt;Sed nec lacus sed nibh iaculis luctus.&lt;/div&gt;
+&lt;/div&gt;
+
 									</code>
 								</pre>
 							</div>
@@ -174,18 +119,24 @@
 					<div id="atoms-textfield" class="sg-pattern">
 						<h2 class="sg-pattern-head" ><a href="../../patterns/00-atoms-06-forms-01-textfield/00-atoms-06-forms-01-textfield.html" class="patternLink" data-patternpartial="atoms-textfield">Textfield</a></h2>
 						<div class="sg-pattern-body">
-							<div class="form-item form-type-textfield">
-  <label class="element-invisible">Lorem Ipsum</label>
-  <input type="text" class="form-text">
+							<div class="form-item form-type-textfield form-item-textfield">
+  <label for="edit-textfield">Textfield </label>
+  <input type="text" id="edit-textfield" name="textfield" placeholder="Elementum massa vestibulum" class="form-text">
+
+  <div class="description">Aenean quis leo sit amet tellus tempus cursus.</div>
 </div>
+
 							<div class="sg-code" style="display: none">
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;div class=&quot;form-item form-type-textfield&quot;&gt;
-  &lt;label class=&quot;element-invisible&quot;&gt;Lorem Ipsum&lt;/label&gt;
-  &lt;input type=&quot;text&quot; class=&quot;form-text&quot;&gt;
+										&lt;div class=&quot;form-item form-type-textfield form-item-textfield&quot;&gt;
+  &lt;label for=&quot;edit-textfield&quot;&gt;Textfield &lt;/label&gt;
+  &lt;input type=&quot;text&quot; id=&quot;edit-textfield&quot; name=&quot;textfield&quot; placeholder=&quot;Elementum massa vestibulum&quot; class=&quot;form-text&quot;&gt;
+
+  &lt;div class=&quot;description&quot;&gt;Aenean quis leo sit amet tellus tempus cursus.&lt;/div&gt;
 &lt;/div&gt;
+
 									</code>
 								</pre>
 							</div>
@@ -194,30 +145,94 @@
 					<div id="atoms-checkbox" class="sg-pattern">
 						<h2 class="sg-pattern-head" ><a href="../../patterns/00-atoms-06-forms-02-checkbox/00-atoms-06-forms-02-checkbox.html" class="patternLink" data-patternpartial="atoms-checkbox">Checkbox</a></h2>
 						<div class="sg-pattern-body">
-							<form action="#">
-    <fieldset class="options">
-        <legend>Checkbox <abbr title="Required">*</abbr></legend>
-        <ul>
-            <li><label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked"> Choice A</label></li>
-            <li><label for="checkbox2"><input id="checkbox2" name="checkbox" type="checkbox"> Choice B</label></li>
-            <li><label for="checkbox3"><input id="checkbox3" name="checkbox" type="checkbox"> Choice C</label></li>
-        </ul>
-    </fieldset>
-</form>
+							<div class="form-item form-type-checkbox form-item-checkbox">
+  <input type="checkbox" id="edit-checkbox" name="checkbox" value="1" checked="checked" class="form-checkbox"> <label
+    class="option" for="edit-checkbox">Checkbox </label>
+
+  <div class="description">Nullam hendrerit, justo et iaculis tristique, ligula risus pretium erat, sed tempus lacus
+    felis ut nulla.
+  </div>
+</div>
+
 							<div class="sg-code" style="display: none">
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;form action=&quot;#&quot;&gt;
-    &lt;fieldset class=&quot;options&quot;&gt;
-        &lt;legend&gt;Checkbox &lt;abbr title=&quot;Required&quot;&gt;*&lt;/abbr&gt;&lt;/legend&gt;
-        &lt;ul&gt;
-            &lt;li&gt;&lt;label for=&quot;checkbox1&quot;&gt;&lt;input id=&quot;checkbox1&quot; name=&quot;checkbox&quot; type=&quot;checkbox&quot; checked=&quot;checked&quot;&gt; Choice A&lt;/label&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;label for=&quot;checkbox2&quot;&gt;&lt;input id=&quot;checkbox2&quot; name=&quot;checkbox&quot; type=&quot;checkbox&quot;&gt; Choice B&lt;/label&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;label for=&quot;checkbox3&quot;&gt;&lt;input id=&quot;checkbox3&quot; name=&quot;checkbox&quot; type=&quot;checkbox&quot;&gt; Choice C&lt;/label&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/fieldset&gt;
-&lt;/form&gt;
+										&lt;div class=&quot;form-item form-type-checkbox form-item-checkbox&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;edit-checkbox&quot; name=&quot;checkbox&quot; value=&quot;1&quot; checked=&quot;checked&quot; class=&quot;form-checkbox&quot;&gt; &lt;label
+    class=&quot;option&quot; for=&quot;edit-checkbox&quot;&gt;Checkbox &lt;/label&gt;
+
+  &lt;div class=&quot;description&quot;&gt;Nullam hendrerit, justo et iaculis tristique, ligula risus pretium erat, sed tempus lacus
+    felis ut nulla.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+					<div id="atoms-checkboxes" class="sg-pattern">
+						<h2 class="sg-pattern-head" ><a href="../../patterns/00-atoms-06-forms-02-checkboxes/00-atoms-06-forms-02-checkboxes.html" class="patternLink" data-patternpartial="atoms-checkboxes">Checkboxes</a></h2>
+						<div class="sg-pattern-body">
+							<div class="form-item form-type-checkboxes form-item-checkboxes">
+  <label for="edit-checkboxes">Checkboxes </label>
+
+  <div id="edit-checkboxes" class="form-checkboxes">
+    <div class="form-item form-type-checkbox form-item-checkboxes-Nam-tincidunt-duis">
+      <input type="checkbox" id="edit-checkboxes-nam-tincidunt-duis" name="checkboxes[Nam tincidunt duis]" value="Nam tincidunt duis" class="form-checkbox"> <label class="option" for="edit-checkboxes-nam-tincidunt-duis">Nam tincidunt duis </label>
+
+    </div>
+    <div class="form-item form-type-checkbox form-item-checkboxes-Aliquam-lorem-neque">
+      <input type="checkbox" id="edit-checkboxes-aliquam-lorem-neque" name="checkboxes[Aliquam lorem neque]" value="Aliquam lorem neque" class="form-checkbox"> <label class="option" for="edit-checkboxes-aliquam-lorem-neque">Aliquam lorem neque </label>
+
+    </div>
+    <div class="form-item form-type-checkbox form-item-checkboxes-Duis-lobortis-egestas">
+      <input type="checkbox" id="edit-checkboxes-duis-lobortis-egestas" name="checkboxes[Duis lobortis egestas]" value="Duis lobortis egestas" class="form-checkbox"> <label class="option" for="edit-checkboxes-duis-lobortis-egestas">Duis lobortis egestas </label>
+
+    </div>
+    <div class="form-item form-type-checkbox form-item-checkboxes-Lacinia-ac-cras">
+      <input type="checkbox" id="edit-checkboxes-lacinia-ac-cras" name="checkboxes[Lacinia ac cras]" value="Lacinia ac cras" class="form-checkbox"> <label class="option" for="edit-checkboxes-lacinia-ac-cras">Lacinia ac cras </label>
+    </div>
+    <div class="form-item form-type-checkbox form-item-checkboxes-Mi-dignissim-viverra">
+      <input type="checkbox" id="edit-checkboxes-mi-dignissim-viverra" name="checkboxes[Mi dignissim viverra]" value="Mi dignissim viverra" class="form-checkbox"> <label class="option" for="edit-checkboxes-mi-dignissim-viverra">Mi dignissim viverra </label>
+
+    </div>
+  </div>
+  <div class="description">Phasellus blandit ullamcorper diam vel porta.</div>
+</div>
+
+							<div class="sg-code" style="display: none">
+								<h3 class="sg-code-head">HTML</h3>
+								<pre class="sg-code-html">
+									<code>
+										&lt;div class=&quot;form-item form-type-checkboxes form-item-checkboxes&quot;&gt;
+  &lt;label for=&quot;edit-checkboxes&quot;&gt;Checkboxes &lt;/label&gt;
+
+  &lt;div id=&quot;edit-checkboxes&quot; class=&quot;form-checkboxes&quot;&gt;
+    &lt;div class=&quot;form-item form-type-checkbox form-item-checkboxes-Nam-tincidunt-duis&quot;&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;edit-checkboxes-nam-tincidunt-duis&quot; name=&quot;checkboxes[Nam tincidunt duis]&quot; value=&quot;Nam tincidunt duis&quot; class=&quot;form-checkbox&quot;&gt; &lt;label class=&quot;option&quot; for=&quot;edit-checkboxes-nam-tincidunt-duis&quot;&gt;Nam tincidunt duis &lt;/label&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;form-item form-type-checkbox form-item-checkboxes-Aliquam-lorem-neque&quot;&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;edit-checkboxes-aliquam-lorem-neque&quot; name=&quot;checkboxes[Aliquam lorem neque]&quot; value=&quot;Aliquam lorem neque&quot; class=&quot;form-checkbox&quot;&gt; &lt;label class=&quot;option&quot; for=&quot;edit-checkboxes-aliquam-lorem-neque&quot;&gt;Aliquam lorem neque &lt;/label&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;form-item form-type-checkbox form-item-checkboxes-Duis-lobortis-egestas&quot;&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;edit-checkboxes-duis-lobortis-egestas&quot; name=&quot;checkboxes[Duis lobortis egestas]&quot; value=&quot;Duis lobortis egestas&quot; class=&quot;form-checkbox&quot;&gt; &lt;label class=&quot;option&quot; for=&quot;edit-checkboxes-duis-lobortis-egestas&quot;&gt;Duis lobortis egestas &lt;/label&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;form-item form-type-checkbox form-item-checkboxes-Lacinia-ac-cras&quot;&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;edit-checkboxes-lacinia-ac-cras&quot; name=&quot;checkboxes[Lacinia ac cras]&quot; value=&quot;Lacinia ac cras&quot; class=&quot;form-checkbox&quot;&gt; &lt;label class=&quot;option&quot; for=&quot;edit-checkboxes-lacinia-ac-cras&quot;&gt;Lacinia ac cras &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-item form-type-checkbox form-item-checkboxes-Mi-dignissim-viverra&quot;&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;edit-checkboxes-mi-dignissim-viverra&quot; name=&quot;checkboxes[Mi dignissim viverra]&quot; value=&quot;Mi dignissim viverra&quot; class=&quot;form-checkbox&quot;&gt; &lt;label class=&quot;option&quot; for=&quot;edit-checkboxes-mi-dignissim-viverra&quot;&gt;Mi dignissim viverra &lt;/label&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;description&quot;&gt;Phasellus blandit ullamcorper diam vel porta.&lt;/div&gt;
+&lt;/div&gt;
+
 									</code>
 								</pre>
 							</div>
@@ -226,30 +241,82 @@
 					<div id="atoms-radio-buttons" class="sg-pattern">
 						<h2 class="sg-pattern-head" ><a href="../../patterns/00-atoms-06-forms-03-radio-buttons/00-atoms-06-forms-03-radio-buttons.html" class="patternLink" data-patternpartial="atoms-radio-buttons">Radio Buttons</a></h2>
 						<div class="sg-pattern-body">
-							<form action="#">
-    <fieldset class="options">
-        <legend>Radio</legend>
-        <ul>
-            <li><label for="radio1"><input id="radio1" name="radio" type="radio" class="radio" checked="checked"> Option 1</label></li>
-            <li><label for="radio2"><input id="radio2" name="radio" type="radio" class="radio"> Option 2</label></li>
-            <li><label for="radio3"><input id="radio3" name="radio" type="radio" class="radio"> Option 3</label></li>
-        </ul>
-    </fieldset>
-</form>
+							<div class="form-item form-type-radios form-item-radios">
+  <label for="edit-radios">Radios </label>
+
+  <div id="edit-radios" class="form-radios">
+    <div class="form-item form-type-radio form-item-radios">
+      <input type="radio" id="edit-radios-nam-tincidunt-duis" name="radios" value="Nam tincidunt duis"
+             class="form-radio"> <label class="option" for="edit-radios-nam-tincidunt-duis">Nam tincidunt duis </label>
+
+    </div>
+    <div class="form-item form-type-radio form-item-radios">
+      <input type="radio" id="edit-radios-aliquam-lorem-neque" name="radios" value="Aliquam lorem neque"
+             class="form-radio"> <label class="option" for="edit-radios-aliquam-lorem-neque">Aliquam lorem
+      neque </label>
+
+    </div>
+    <div class="form-item form-type-radio form-item-radios">
+      <input type="radio" id="edit-radios-duis-lobortis-egestas" name="radios" value="Duis lobortis egestas"
+             class="form-radio"> <label class="option" for="edit-radios-duis-lobortis-egestas">Duis lobortis
+      egestas </label>
+
+    </div>
+    <div class="form-item form-type-radio form-item-radios">
+      <input type="radio" id="edit-radios-lacinia-ac-cras" name="radios" value="Lacinia ac cras" class="form-radio">
+      <label class="option" for="edit-radios-lacinia-ac-cras">Lacinia ac cras </label>
+
+    </div>
+    <div class="form-item form-type-radio form-item-radios">
+      <input type="radio" id="edit-radios-mi-dignissim-viverra" name="radios" value="Mi dignissim viverra"
+             class="form-radio"> <label class="option" for="edit-radios-mi-dignissim-viverra">Mi dignissim
+      viverra </label>
+
+    </div>
+  </div>
+  <div class="description">Duis orci nunc, lacinia in malesuada et, euismod id turpis.</div>
+</div>
+
 							<div class="sg-code" style="display: none">
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;form action=&quot;#&quot;&gt;
-    &lt;fieldset class=&quot;options&quot;&gt;
-        &lt;legend&gt;Radio&lt;/legend&gt;
-        &lt;ul&gt;
-            &lt;li&gt;&lt;label for=&quot;radio1&quot;&gt;&lt;input id=&quot;radio1&quot; name=&quot;radio&quot; type=&quot;radio&quot; class=&quot;radio&quot; checked=&quot;checked&quot;&gt; Option 1&lt;/label&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;label for=&quot;radio2&quot;&gt;&lt;input id=&quot;radio2&quot; name=&quot;radio&quot; type=&quot;radio&quot; class=&quot;radio&quot;&gt; Option 2&lt;/label&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;label for=&quot;radio3&quot;&gt;&lt;input id=&quot;radio3&quot; name=&quot;radio&quot; type=&quot;radio&quot; class=&quot;radio&quot;&gt; Option 3&lt;/label&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/fieldset&gt;
-&lt;/form&gt;
+										&lt;div class=&quot;form-item form-type-radios form-item-radios&quot;&gt;
+  &lt;label for=&quot;edit-radios&quot;&gt;Radios &lt;/label&gt;
+
+  &lt;div id=&quot;edit-radios&quot; class=&quot;form-radios&quot;&gt;
+    &lt;div class=&quot;form-item form-type-radio form-item-radios&quot;&gt;
+      &lt;input type=&quot;radio&quot; id=&quot;edit-radios-nam-tincidunt-duis&quot; name=&quot;radios&quot; value=&quot;Nam tincidunt duis&quot;
+             class=&quot;form-radio&quot;&gt; &lt;label class=&quot;option&quot; for=&quot;edit-radios-nam-tincidunt-duis&quot;&gt;Nam tincidunt duis &lt;/label&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;form-item form-type-radio form-item-radios&quot;&gt;
+      &lt;input type=&quot;radio&quot; id=&quot;edit-radios-aliquam-lorem-neque&quot; name=&quot;radios&quot; value=&quot;Aliquam lorem neque&quot;
+             class=&quot;form-radio&quot;&gt; &lt;label class=&quot;option&quot; for=&quot;edit-radios-aliquam-lorem-neque&quot;&gt;Aliquam lorem
+      neque &lt;/label&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;form-item form-type-radio form-item-radios&quot;&gt;
+      &lt;input type=&quot;radio&quot; id=&quot;edit-radios-duis-lobortis-egestas&quot; name=&quot;radios&quot; value=&quot;Duis lobortis egestas&quot;
+             class=&quot;form-radio&quot;&gt; &lt;label class=&quot;option&quot; for=&quot;edit-radios-duis-lobortis-egestas&quot;&gt;Duis lobortis
+      egestas &lt;/label&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;form-item form-type-radio form-item-radios&quot;&gt;
+      &lt;input type=&quot;radio&quot; id=&quot;edit-radios-lacinia-ac-cras&quot; name=&quot;radios&quot; value=&quot;Lacinia ac cras&quot; class=&quot;form-radio&quot;&gt;
+      &lt;label class=&quot;option&quot; for=&quot;edit-radios-lacinia-ac-cras&quot;&gt;Lacinia ac cras &lt;/label&gt;
+
+    &lt;/div&gt;
+    &lt;div class=&quot;form-item form-type-radio form-item-radios&quot;&gt;
+      &lt;input type=&quot;radio&quot; id=&quot;edit-radios-mi-dignissim-viverra&quot; name=&quot;radios&quot; value=&quot;Mi dignissim viverra&quot;
+             class=&quot;form-radio&quot;&gt; &lt;label class=&quot;option&quot; for=&quot;edit-radios-mi-dignissim-viverra&quot;&gt;Mi dignissim
+      viverra &lt;/label&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;description&quot;&gt;Duis orci nunc, lacinia in malesuada et, euismod id turpis.&lt;/div&gt;
+&lt;/div&gt;
+
 									</code>
 								</pre>
 							</div>
@@ -258,16 +325,38 @@
 					<div id="atoms-submit" class="sg-pattern">
 						<h2 class="sg-pattern-head" ><a href="../../patterns/00-atoms-06-forms-04-submit/00-atoms-06-forms-04-submit.html" class="patternLink" data-patternpartial="atoms-submit">Submit</a></h2>
 						<div class="sg-pattern-body">
-							<div class="form-actions form-wrapper" id="edit-actions">
-  <input type="submit" id="edit-submit" name="op" value="Lorem Ipsum" class="form-submit">
+							<input type="submit" id="" name="" value="Lorem Ipsum" class="form-submit">
+
+							<div class="sg-code" style="display: none">
+								<h3 class="sg-code-head">HTML</h3>
+								<pre class="sg-code-html">
+									<code>
+										&lt;input type=&quot;submit&quot; id=&quot;&quot; name=&quot;&quot; value=&quot;Lorem Ipsum&quot; class=&quot;form-submit&quot;&gt;
+
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+					<div id="atoms-file-upload" class="sg-pattern">
+						<h2 class="sg-pattern-head" ><a href="../../patterns/00-atoms-06-forms-06-file-upload/00-atoms-06-forms-06-file-upload.html" class="patternLink" data-patternpartial="atoms-file-upload">File Upload</a></h2>
+						<div class="sg-pattern-body">
+							<div class="form-item form-type-file form-item-files-file">
+  <label for="edit-file">File </label>
+  <input type="file" id="edit-file" name="files[file]" size="60" class="form-file">
+
+  <div class="description">In faucibus feugiat urna sit amet elementum.</div>
 </div>
 
 							<div class="sg-code" style="display: none">
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-										&lt;div class=&quot;form-actions form-wrapper&quot; id=&quot;edit-actions&quot;&gt;
-  &lt;input type=&quot;submit&quot; id=&quot;edit-submit&quot; name=&quot;op&quot; value=&quot;Lorem Ipsum&quot; class=&quot;form-submit&quot;&gt;
+										&lt;div class=&quot;form-item form-type-file form-item-files-file&quot;&gt;
+  &lt;label for=&quot;edit-file&quot;&gt;File &lt;/label&gt;
+  &lt;input type=&quot;file&quot; id=&quot;edit-file&quot; name=&quot;files[file]&quot; size=&quot;60&quot; class=&quot;form-file&quot;&gt;
+
+  &lt;div class=&quot;description&quot;&gt;In faucibus feugiat urna sit amet elementum.&lt;/div&gt;
 &lt;/div&gt;
 
 									</code>
@@ -275,33 +364,159 @@
 							</div>
 						</div>
 					</div>
-					<div id="atoms-html5-inputs" class="sg-pattern">
-						<h2 class="sg-pattern-head" ><a href="../../patterns/00-atoms-06-forms-09-html5-inputs/00-atoms-06-forms-09-html5-inputs.html" class="patternLink" data-patternpartial="atoms-html5-inputs">Html5 Inputs</a></h2>
+					<div id="atoms-managed-file" class="sg-pattern">
+						<h2 class="sg-pattern-head" ><a href="../../patterns/00-atoms-06-forms-06-managed-file/00-atoms-06-forms-06-managed-file.html" class="patternLink" data-patternpartial="atoms-managed-file">Managed File</a></h2>
 						<div class="sg-pattern-body">
-								<fieldset>
-    <div class="field-container"><label for="ic">Color input</label> <input type="color" id="ic" value="#000000"></div>
-    <div class="field-container"><label for="in">Number input</label> <input type="number" id="in" min="0" max="10" value="5"></div>
-    <div class="field-container"><label for="ir">Range input</label> <input type="range" id="ir" value="10"></div>
-    <div class="field-container"><label for="idd">Date input</label> <input type="date" id="idd" value="1970-01-01"></div>
-    <div class="field-container"><label for="idm">Month input</label> <input type="month" id="idm" value="1970-01"></div>
-    <div class="field-container"><label for="idw">Week input</label> <input type="week" id="idw" value="1970-W01"></div>
-    <div class="field-container"><label for="idt">Datetime input</label> <input type="datetime" id="idt" value="1970-01-01T00:00:00Z"></div>
-    <div class="field-container"><label for="idtl">Datetime-local input</label> <input type="datetime-local" id="idtl" value="1970-01-01T00:00"></div>
-</fieldset>
+							<div class="form-item form-type-managed-file form-item-managed-file">
+  <label for="edit-managed-file">Managed file </label>
+ <div id="edit-managed-file" class="form-managed-file"><input type="file" id="edit-managed-file-upload" name="files[managed_file]" size="22" class="form-file"><input type="submit" id="edit-managed-file-upload-button" name="managed_file_upload_button" value="Upload" class="form-submit ajax-processed"><input type="hidden" name="managed_file[fid]" value="0">
+</div>
+<div class="description">Phasellus sagittis, orci vel laoreet molestie, urna orci imperdiet elit, quis ultricies orci mauris vel ante.</div>
+</div>
+
 							<div class="sg-code" style="display: none">
 								<h3 class="sg-code-head">HTML</h3>
 								<pre class="sg-code-html">
 									<code>
-											&lt;fieldset&gt;
-    &lt;div class=&quot;field-container&quot;&gt;&lt;label for=&quot;ic&quot;&gt;Color input&lt;/label&gt; &lt;input type=&quot;color&quot; id=&quot;ic&quot; value=&quot;#000000&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;field-container&quot;&gt;&lt;label for=&quot;in&quot;&gt;Number input&lt;/label&gt; &lt;input type=&quot;number&quot; id=&quot;in&quot; min=&quot;0&quot; max=&quot;10&quot; value=&quot;5&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;field-container&quot;&gt;&lt;label for=&quot;ir&quot;&gt;Range input&lt;/label&gt; &lt;input type=&quot;range&quot; id=&quot;ir&quot; value=&quot;10&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;field-container&quot;&gt;&lt;label for=&quot;idd&quot;&gt;Date input&lt;/label&gt; &lt;input type=&quot;date&quot; id=&quot;idd&quot; value=&quot;1970-01-01&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;field-container&quot;&gt;&lt;label for=&quot;idm&quot;&gt;Month input&lt;/label&gt; &lt;input type=&quot;month&quot; id=&quot;idm&quot; value=&quot;1970-01&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;field-container&quot;&gt;&lt;label for=&quot;idw&quot;&gt;Week input&lt;/label&gt; &lt;input type=&quot;week&quot; id=&quot;idw&quot; value=&quot;1970-W01&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;field-container&quot;&gt;&lt;label for=&quot;idt&quot;&gt;Datetime input&lt;/label&gt; &lt;input type=&quot;datetime&quot; id=&quot;idt&quot; value=&quot;1970-01-01T00:00:00Z&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;field-container&quot;&gt;&lt;label for=&quot;idtl&quot;&gt;Datetime-local input&lt;/label&gt; &lt;input type=&quot;datetime-local&quot; id=&quot;idtl&quot; value=&quot;1970-01-01T00:00&quot;&gt;&lt;/div&gt;
+										&lt;div class=&quot;form-item form-type-managed-file form-item-managed-file&quot;&gt;
+  &lt;label for=&quot;edit-managed-file&quot;&gt;Managed file &lt;/label&gt;
+ &lt;div id=&quot;edit-managed-file&quot; class=&quot;form-managed-file&quot;&gt;&lt;input type=&quot;file&quot; id=&quot;edit-managed-file-upload&quot; name=&quot;files[managed_file]&quot; size=&quot;22&quot; class=&quot;form-file&quot;&gt;&lt;input type=&quot;submit&quot; id=&quot;edit-managed-file-upload-button&quot; name=&quot;managed_file_upload_button&quot; value=&quot;Upload&quot; class=&quot;form-submit ajax-processed&quot;&gt;&lt;input type=&quot;hidden&quot; name=&quot;managed_file[fid]&quot; value=&quot;0&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;description&quot;&gt;Phasellus sagittis, orci vel laoreet molestie, urna orci imperdiet elit, quis ultricies orci mauris vel ante.&lt;/div&gt;
+&lt;/div&gt;
+
+									</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+					<div id="atoms-fieldset" class="sg-pattern">
+						<h2 class="sg-pattern-head" ><a href="../../patterns/00-atoms-06-forms-10-fieldset/00-atoms-06-forms-10-fieldset.html" class="patternLink" data-patternpartial="atoms-fieldset">Fieldset</a></h2>
+						<div class="sg-pattern-body">
+							<fieldset class="form-wrapper" id="edit-fieldset">
+  <legend><span class="fieldset-legend">Fieldset</span></legend>
+  <div class="fieldset-wrapper">
+    <div class="fieldset-description">Etiam vel dui posuere lectus auctor viverra vitae id eros.</div>
+    <div class="form-item form-type-select form-item-select-fieldset">
+      <label for="edit-select-fieldset">Select </label>
+      <select id="edit-select-fieldset" name="select-fieldset" class="form-select">
+        <option value="Est lacinia et">Est lacinia et</option>
+        <option value="Aliquam vulputate turpis">Aliquam vulputate turpis</option>
+        <option value="Neque lacus in">Neque lacus in</option>
+        <option value="Vestibulum sed turpis">Vestibulum sed turpis</option>
+        <option value="Eget luctus eu">Eget luctus eu</option>
+      </select>
+
+      <div class="description">Morbi eget odio elit, et cursus odio.</div>
+    </div>
+    <div class="form-item form-type-checkboxes form-item-checkboxes-fieldset">
+      <label for="edit-checkboxes-fieldset">Checkboxes </label>
+
+      <div id="edit-checkboxes-fieldset" class="form-checkboxes">
+        <div class="form-item form-type-checkbox form-item-checkboxes-fieldset-Est-lacinia-et">
+          <input type="checkbox" id="edit-checkboxes-fieldset-est-lacinia-et" name="checkboxes-fieldset[Est lacinia et]"
+                 value="Est lacinia et" class="form-checkbox"> <label class="option"
+                                                                      for="edit-checkboxes-fieldset-est-lacinia-et">Est
+          lacinia et </label>
+
+        </div>
+        <div class="form-item form-type-checkbox form-item-checkboxes-fieldset-Aliquam-vulputate-turpis">
+          <input type="checkbox" id="edit-checkboxes-fieldset-aliquam-vulputate-turpis"
+                 name="checkboxes-fieldset[Aliquam vulputate turpis]" value="Aliquam vulputate turpis"
+                 class="form-checkbox"> <label class="option" for="edit-checkboxes-fieldset-aliquam-vulputate-turpis">Aliquam
+          vulputate turpis </label>
+
+        </div>
+        <div class="form-item form-type-checkbox form-item-checkboxes-fieldset-Neque-lacus-in">
+          <input type="checkbox" id="edit-checkboxes-fieldset-neque-lacus-in" name="checkboxes-fieldset[Neque lacus in]"
+                 value="Neque lacus in" class="form-checkbox"> <label class="option"
+                                                                      for="edit-checkboxes-fieldset-neque-lacus-in">Neque
+          lacus in </label>
+
+        </div>
+        <div class="form-item form-type-checkbox form-item-checkboxes-fieldset-Vestibulum-sed-turpis">
+          <input type="checkbox" id="edit-checkboxes-fieldset-vestibulum-sed-turpis"
+                 name="checkboxes-fieldset[Vestibulum sed turpis]" value="Vestibulum sed turpis" class="form-checkbox">
+          <label class="option" for="edit-checkboxes-fieldset-vestibulum-sed-turpis">Vestibulum sed turpis </label>
+
+        </div>
+        <div class="form-item form-type-checkbox form-item-checkboxes-fieldset-Eget-luctus-eu">
+          <input type="checkbox" id="edit-checkboxes-fieldset-eget-luctus-eu" name="checkboxes-fieldset[Eget luctus eu]"
+                 value="Eget luctus eu" class="form-checkbox"> <label class="option"
+                                                                      for="edit-checkboxes-fieldset-eget-luctus-eu">Eget
+          luctus eu </label>
+
+        </div>
+      </div>
+      <div class="description">Ut dignissim convallis eros, viverra luctus lacus consequat ac.</div>
+    </div>
+  </div>
+</fieldset>
+
+							<div class="sg-code" style="display: none">
+								<h3 class="sg-code-head">HTML</h3>
+								<pre class="sg-code-html">
+									<code>
+										&lt;fieldset class=&quot;form-wrapper&quot; id=&quot;edit-fieldset&quot;&gt;
+  &lt;legend&gt;&lt;span class=&quot;fieldset-legend&quot;&gt;Fieldset&lt;/span&gt;&lt;/legend&gt;
+  &lt;div class=&quot;fieldset-wrapper&quot;&gt;
+    &lt;div class=&quot;fieldset-description&quot;&gt;Etiam vel dui posuere lectus auctor viverra vitae id eros.&lt;/div&gt;
+    &lt;div class=&quot;form-item form-type-select form-item-select-fieldset&quot;&gt;
+      &lt;label for=&quot;edit-select-fieldset&quot;&gt;Select &lt;/label&gt;
+      &lt;select id=&quot;edit-select-fieldset&quot; name=&quot;select-fieldset&quot; class=&quot;form-select&quot;&gt;
+        &lt;option value=&quot;Est lacinia et&quot;&gt;Est lacinia et&lt;/option&gt;
+        &lt;option value=&quot;Aliquam vulputate turpis&quot;&gt;Aliquam vulputate turpis&lt;/option&gt;
+        &lt;option value=&quot;Neque lacus in&quot;&gt;Neque lacus in&lt;/option&gt;
+        &lt;option value=&quot;Vestibulum sed turpis&quot;&gt;Vestibulum sed turpis&lt;/option&gt;
+        &lt;option value=&quot;Eget luctus eu&quot;&gt;Eget luctus eu&lt;/option&gt;
+      &lt;/select&gt;
+
+      &lt;div class=&quot;description&quot;&gt;Morbi eget odio elit, et cursus odio.&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-item form-type-checkboxes form-item-checkboxes-fieldset&quot;&gt;
+      &lt;label for=&quot;edit-checkboxes-fieldset&quot;&gt;Checkboxes &lt;/label&gt;
+
+      &lt;div id=&quot;edit-checkboxes-fieldset&quot; class=&quot;form-checkboxes&quot;&gt;
+        &lt;div class=&quot;form-item form-type-checkbox form-item-checkboxes-fieldset-Est-lacinia-et&quot;&gt;
+          &lt;input type=&quot;checkbox&quot; id=&quot;edit-checkboxes-fieldset-est-lacinia-et&quot; name=&quot;checkboxes-fieldset[Est lacinia et]&quot;
+                 value=&quot;Est lacinia et&quot; class=&quot;form-checkbox&quot;&gt; &lt;label class=&quot;option&quot;
+                                                                      for=&quot;edit-checkboxes-fieldset-est-lacinia-et&quot;&gt;Est
+          lacinia et &lt;/label&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;form-item form-type-checkbox form-item-checkboxes-fieldset-Aliquam-vulputate-turpis&quot;&gt;
+          &lt;input type=&quot;checkbox&quot; id=&quot;edit-checkboxes-fieldset-aliquam-vulputate-turpis&quot;
+                 name=&quot;checkboxes-fieldset[Aliquam vulputate turpis]&quot; value=&quot;Aliquam vulputate turpis&quot;
+                 class=&quot;form-checkbox&quot;&gt; &lt;label class=&quot;option&quot; for=&quot;edit-checkboxes-fieldset-aliquam-vulputate-turpis&quot;&gt;Aliquam
+          vulputate turpis &lt;/label&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;form-item form-type-checkbox form-item-checkboxes-fieldset-Neque-lacus-in&quot;&gt;
+          &lt;input type=&quot;checkbox&quot; id=&quot;edit-checkboxes-fieldset-neque-lacus-in&quot; name=&quot;checkboxes-fieldset[Neque lacus in]&quot;
+                 value=&quot;Neque lacus in&quot; class=&quot;form-checkbox&quot;&gt; &lt;label class=&quot;option&quot;
+                                                                      for=&quot;edit-checkboxes-fieldset-neque-lacus-in&quot;&gt;Neque
+          lacus in &lt;/label&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;form-item form-type-checkbox form-item-checkboxes-fieldset-Vestibulum-sed-turpis&quot;&gt;
+          &lt;input type=&quot;checkbox&quot; id=&quot;edit-checkboxes-fieldset-vestibulum-sed-turpis&quot;
+                 name=&quot;checkboxes-fieldset[Vestibulum sed turpis]&quot; value=&quot;Vestibulum sed turpis&quot; class=&quot;form-checkbox&quot;&gt;
+          &lt;label class=&quot;option&quot; for=&quot;edit-checkboxes-fieldset-vestibulum-sed-turpis&quot;&gt;Vestibulum sed turpis &lt;/label&gt;
+
+        &lt;/div&gt;
+        &lt;div class=&quot;form-item form-type-checkbox form-item-checkboxes-fieldset-Eget-luctus-eu&quot;&gt;
+          &lt;input type=&quot;checkbox&quot; id=&quot;edit-checkboxes-fieldset-eget-luctus-eu&quot; name=&quot;checkboxes-fieldset[Eget luctus eu]&quot;
+                 value=&quot;Eget luctus eu&quot; class=&quot;form-checkbox&quot;&gt; &lt;label class=&quot;option&quot;
+                                                                      for=&quot;edit-checkboxes-fieldset-eget-luctus-eu&quot;&gt;Eget
+          luctus eu &lt;/label&gt;
+
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;description&quot;&gt;Ut dignissim convallis eros, viverra luctus lacus consequat ac.&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 &lt;/fieldset&gt;
+
 									</code>
 								</pre>
 							</div>

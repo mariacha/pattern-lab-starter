@@ -35,6 +35,7 @@
     <!-- endbower -->
     
     <!-- injector:js -->
+    <script src="../../../../js/compiled-from-es6.js"></script>
     <script src="../../../../js/script.js"></script>
     <!-- endinjector -->
     
@@ -45,24 +46,28 @@
 	<!-- Begin .header -->
 	<header class="header cf" role="banner">
 	<a href="#"><img src="../../../../images/logo.png" class="logo" alt="Logo Alt Text" /></a>		<a href="#search-form" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
-		<a href="#nav" class="nav-toggle nav-toggle-menu icon-menu"><span class="is-vishidden">Menu</span></a>
-	<nav id="nav" class="nav">
-		<ul class="nav-list">
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Blog</a></li>
-			<li><a href="#">Contact</a></li>
-		</ul>
-	</nav><!--end .nav-->
-	<form action="#" method="post" class="inline-form search-form">           
+	<nav class="primary-nav">
+	  <ul class="menu clearfix">
+	    <li class="first leaf"><a href="#" title="View and customize your dashboard.">Menu Item 1</a></li>
+	    <li class="collapsed"><a href="#" title="Administer content and comments.">Menu Item 2</a></li>
+	    <li class="collapsed"><a href="#" title="Administer blocks, content types, menus, etc.">Menu Item 3</a></li>
+	    <li class="expanded active-trail"><a href="#" title="Select and configure your themes." class="active-trail">Menu
+	      Item 4</a>
+	      <ul class="menu clearfix">
+	        <li class="first leaf active-trail"><a href="#" class="active-trail active">Menu Item 4.1</a></li>
+	        <li class="leaf"><a href="#" class="">Menu Item 4.2</a></li>
+	        <li class="last leaf"><a href="#" class="">Menu Item 4.3</a></li>
+	      </ul>
+	    </li>
+	    <li class="leaf"><a href="#" title="Manage user accounts, roles, and permissions.">Menu Item 5</a></li>
+	    <li class="leaf last"><a href="#" title="Extend site functionality.">Menu Item 6</a></li>
+	  </ul>
+	</nav>	<form action="#" method="post" class="inline-form search-form">           
 	    <fieldset>
 		    <legend class="is-vishidden">Search</legend>
 		    <label for="search-field" class="is-vishidden">Search</label>
 		    <input type="search" placeholder="Search" id="search-field" class="search-field" />
-		    <button class="search-submit">
-		    	<span class="icon-search" aria-hidden="true"></span>
-		    	<span class="is-vishidden">Search</span>
-		    </button>
+	    <input type="submit" id="" name="" value="Lorem Ipsum" class="form-submit">
 	    </fieldset>
 	</form>	</header>
 	<!-- End .header -->	<div role="main">
